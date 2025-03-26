@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why are we doing this</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #e8c5a5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #fffdef;
+            color: rgb(117, 73, 52);
+            padding: 10px 0;
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .navbar {
+            background-color: #fffdef;
+            padding: 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: rgb(117, 73, 52);
+            text-decoration: none;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: #794022;
+        }
+
+        .container-blog {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            text-align: left;
+        }
+
+        .blog-post {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .blog-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .blog-image {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+        }
+
+        .blog-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .date {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .pee {
+            color: #1e1e1e;
+            line-height: 1.6;
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        .hero3 {
+            background-color: #794022;
+            padding: 1px;
+            color: #fffdef;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="Mypage.html">Home</a></li>
+                <li><a href="Quotes.html">Quotes</a></li>
+                <li><a href="Diary.html">Diary</a></li>
+                <li><a href="Recipe.html">Recipe</a></li>
+                <li><a href="Review.html">Review</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="hero3">
+        <h1>Mini Blog</h1>
+        <p>Updates about what I have been up to in past days</p>
+    </div>
+    
+    <div class="container-blog">
+
+        <div class="blog-post">
+            <h1>Yingge Ceramics Museum</h1>
+            <p class="date">Published on January 25, 2025</p>
+            <div class="blog-content">
+                <img src="BDH.jpg" alt="Ceramics Museum" class="blog-image">
+                <div class="blog-text">
+                    <p class="pee">Today, I visited the ceramics museum in the Yingge district and found this amazing ceramic art called Bearded Dragon’s Habitat by Melis Buyruk (2022). The design was mesmerizing and reminded me of my dream pet!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-post">
+            <h1>Unexpected Keelung Trip</h1>
+            <p class="date">Published on February 28, 2025</p>
+            <div class="blog-content reverse">
+                <img src="Keelung.jpg" alt="Keelung Trip" class="blog-image">
+                <div class="blog-text">
+                    <p class="pee">We were supposed to go ice skating in Nangang, but at the last minute, we changed our destination to Keelung. Unexpectedly, it turned out to be an amazing trip with great weather, delicious food, and good company!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-post">
+            <h1>Unexpected Food Encounter</h1>
+            <p class="date">Published on March 2, 2025</p>
+            <div class="blog-content">
+                <img src="myphoto_shishuka.jpg" alt="Middle Eastern Food" class="blog-image">
+                <div class="blog-text">
+                    <p class="pee">A friend visiting from Singapore led us to a cozy Middle Eastern restaurant in Zhongzheng. The potato wedges were surprisingly the best I’ve had in Taiwan, and the Shakshouka paired beautifully with the hummus and kebab!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-post">
+            <h1>Exploring the Glass House</h1>
+            <p class="date">Published on March 20, 2025</p>
+            <div class="blog-content reverse">
+                <img src="botanical_g.jpg" alt="Glass House Botanical Garden" class="blog-image">
+                <div class="blog-text">
+                    <p class="pee">The weather was too nice to stay indoors, so I explored Taipei on my own. I stumbled upon a beautiful botanical garden with an air-conditioned glass house—such a perfect escape on a sunny day!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <p>© 2025 My Personal Diary. All Rights Reserved.</p>
+</footer>
+</html>

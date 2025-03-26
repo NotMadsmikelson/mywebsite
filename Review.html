@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why are we doing this</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #e8c5a5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #fffdef;
+            color: rgb(117, 73, 52);
+            padding: 10px 0;
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .navbar {
+            background-color: #fffdef;
+            padding: 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: rgb(117, 73, 52);
+            text-decoration: none;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: #794022;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 10px;
+        }
+
+        .hero3 {
+            background-color: #794022;
+            padding: 1px;
+            color: #fffdef;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .restaurant-img-container {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .restaurant-img {
+            width: 100%;
+            max-width: 400px; /* Ensures image stays inside container */
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .restaurant-container {
+            display: flex;
+            background: #f8e1d1;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .restaurant-info {
+            flex: 1;
+            padding: 30px;
+            text-align: left;
+        }
+
+        .restaurant-info h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .restaurant-info p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="Mypage.html">Home</a></li>
+                <li><a href="Quotes.html">Quotes</a></li>
+                <li><a href="Diary.html">Diary</a></li>
+                <li><a href="Recipe.html">Recipe</a></li>
+                <li><a href="Review.html">Review</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="hero3">
+        <h1>Favorite Food and Restaurants</h1>
+    </div>
+
+    <div class="restaurant-page">
+        <div class="restaurant-container">
+            <div class="restaurant-info">
+                <h2>Gyuu Niku (牛肉) - Taipei</h2>
+                <p>A must-visit spot in Taipei for beef lovers! Famous for its premium cuts, rich flavors, and perfectly grilled meats.</p>
+                <p><strong>Review:</strong> "The best beef I've had in Taipei! Perfectly grilled and melts in your mouth." ⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="restaurant-img-container">
+                <img src="Fancyricebowl.jpg" alt="Gyuu Niku Restaurant" class="restaurant-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="restaurant-page">
+        <div class="restaurant-container">
+            <div class="restaurant-info">
+                <h2>Shishlik Pita x Kebab - Taipei</h2>
+                <p>A hidden gem in Taipei serving authentic Middle Eastern flavors! Known for its juicy kebabs, fresh pita, and bold spices.</p>
+                <p><strong>Must try:</strong> Grilled lamb skewers, beef kebabs, and handmade pita. ⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="restaurant-img-container">
+                <img src="Shishuka.jpg" alt="Shishlik Pita x Kebab Restaurant" class="restaurant-img">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 My Personal Diary. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

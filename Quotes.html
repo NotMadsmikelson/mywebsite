@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why are we doing this</title>
+    <style>
+        body {
+            background-color: #e8c5a5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #fffdef;
+            color: rgb(117, 73, 52);
+            padding: 5px 0;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        .Containerbig {
+            background-color: #d99957;
+            color: white;
+            flex-wrap: nowrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .MiniContainer {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+            width: fit-content;
+            text-align: center;
+            justify-content: center;
+            flex: 1;
+            color: #222;
+        }
+
+        .hero3 {
+            background-color: #794022;
+            padding: 1px;
+            color: #fffdef;
+            text-align: center;
+            padding-bottom: 10px;
+
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 10px;
+        }
+        .navbar {
+            background-color: #fffdef;
+            padding: 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: rgb(117, 73, 52);
+            text-decoration: none;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: #794022;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="navbar">
+                <ul>
+                    <li><a href="Mypage.html">Home</a></li>
+                    <li><a href="Quotes.Html">Quotes</a></li>
+                    <li><a href="Diary.html">Diary</a></li>
+                    <li><a href="Recepie.html">Recipe</a></li>
+                    <li><a href="Review.html">Review</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <style>
+        .Pquote {
+            font-family: Arial, sans-serif;
+            background-color: #f9e5d7;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .quote-container {
+            width: 500px;
+            height: 180px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+
+        .buttons {
+            margin-top: 15px;
+        }
+
+        .btn {
+            background-color: #C6A988;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #dcbe9d;
+        }
+    </style>
+    </head>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .rightside {
+            text-align: left;
+            max-width: 50%;
+            margin-right: 20px;
+        }
+    </style>
+
+    <body>
+
+        <div class="hero3">
+            <h1>Random Quote Generator</h1>
+        </div>
+
+        <div class="quote-container" id="quoteBox">
+            Daily Quote [mostly marvel]
+        </div>
+
+        <div class="buttons">
+            <button class="btn" onclick="newQuote()">New Quote</button>
+        </div>
+
+        <script>
+            const quotes = [
+                `"We all have our demons." – John Constantine, Constantine`,
+                `"Madness, as you know, is like gravity. All it takes is a little push." – Joker, The Dark Knight`,
+                `"You can’t be brave if you’ve only had wonderful things happen to you." – Batman, The Lego Batman Movie`,
+                `"It’s not who I am underneath, but what I do that defines me." – Bruce Wayne, Batman Begins`,
+                `"The world only makes sense if you force it to." – Bruce Wayne, Batman v Superman: Dawn of Justice`,
+                `"I had to lose everything to finally see what I had." – Doctor Strange, Doctor Strange`,
+                `"You can’t save everyone." – Miguel O’Hara`,
+                `"I just wanted to help." – Peter Parker`,
+                `"With great power comes great responsibility." – Uncle Ben`,
+                `"We always have a choice. It’s the choices that make us who we are." – Spider-Man 3`,
+                `"I can do this all day." – Captain America, The First Avenger`,
+                `"I love you 3000." – Ironman, Avengers: Endgame`,
+                `"I have nothing left to lose." – Thor, Avengers: Endgame`,
+                `"To erase evil, you must be willing to become evil itself." – William James Moriarty`,
+                `"The weight of a sin does not vanish simply because it was done for a noble cause." – Sherlock Holmes`,
+                `"Even the most brilliant mind cannot change fate… only delay it." – Louis James Moriarty`,
+                `"If evil is what is necessary to destroy an even greater evil, then I will gladly stain my hands." – William James Moriarty`,
+                `"Immortality is a curse, not a gift. The longer you live, the more you watch everything you love fade away." – Charles J. Chrishunds`,
+                `"Faith and sin are two sides of the same coin. The deeper your faith, the greater your fall when you lose it." – Johnny Rayflo`
+            ];
+
+            function newQuote() {
+                const quoteBox = document.getElementById('quoteBox');
+                quoteBox.style.opacity = 0;
+                setTimeout(() => {
+                    let randomIndex = Math.floor(Math.random() * quotes.length);
+                    quoteBox.innerHTML = quotes[randomIndex];
+                    quoteBox.style.opacity = 1;
+                }, 300);
+            }
+        </script>
+
+    </body>
+
+    <footer>
+        <p>© 2025 My Personal Diary. All Rights Reserved.</p>
+    </footer>
+
+</html>

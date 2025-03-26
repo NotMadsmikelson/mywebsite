@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <style>
+        body {
+            background-color: #e8c5a5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #fffdef;
+            color: rgb(117, 73, 52);
+            padding: 10px 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .hero3 {
+            background-color: #794022;
+            padding: 10px;
+            color: #fffdef;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #fffdef;
+            padding: 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: rgb(117, 73, 52);
+            text-decoration: none;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: #794022;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 10px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 15px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            display: flex;
+        }
+
+        .food-list {
+            width: 30%;
+            text-align: left;
+            padding-right: 20px;
+            border-right: 2px solid #794022;
+        }
+
+        .food-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .food-list li {
+            cursor: pointer;
+            color: #794022;
+            text-decoration: underline;
+            margin-bottom: 5px;
+        }
+
+        .food-list li:hover {
+            color: #cc0000;
+        }
+
+        .recipe-box {
+            width: 70%;
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        .recipe-image {
+            width: 100%;
+            max-width: 400px;
+            /* Adjust max-width as needed */
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h2 {
+            color: #794022;
+            margin-bottom: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="Mypage.html">Home</a></li>
+                <li><a href="Quotes.html">Quotes</a></li>
+                <li><a href="Diary.html">Diary</a></li>
+                <li><a href="Recepie.html">Recipe</a></li>
+                <li><a href="Review.html">Review</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="hero3">
+        <h1>Recipe Book</h1>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="food-list">
+                <h2>Food List</h2>
+                <ul id="food-list"></ul>
+            </div>
+            <div class="recipe-box" id="recipe-box">
+                <h2>Recipe & Steps</h2>
+                <p>Click on a food item to see the recipe.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const recipes = {
+            "Spaghetti Carbonara": {
+                image: "carbonara.jpg",
+                ingredients: ["200g spaghetti", "100g pancetta", "2 eggs", "50g parmesan cheese", "Salt & pepper"],
+                steps: ["Boil the pasta until al dente.", "Fry the pancetta until crispy.", "Whisk eggs and cheese together.", "Mix everything while warm.", "Serve immediately with extra cheese."]
+            },
+            "Grilled Chicken": {
+                image: "grillchiken.jpg",
+                ingredients: ["2 chicken breasts", "1 tbsp olive oil", "1 tsp salt", "1/2 tsp black pepper", "1 tsp garlic powder"],
+                steps: ["Preheat the grill.", "Season the chicken.", "Grill for 6-7 minutes per side.", "Let rest before serving."]
+            },
+            "Epicurious Best Pancake": {
+                image: "pancake.jpg",
+                ingredients: ["1 cup flour", "2 tbsp sugar", "1 tsp baking powder", "3/4 cup buttermilk", "1 egg", "2 tbsp butter"],
+                steps: ["Mix dry ingredients.", "Whisk wet ingredients separately.", "Combine and cook on a pan.", "Serve with syrup."]
+            },
+            "Healthy French Toast": {
+                image: "french-toast.jpg",
+                ingredients: ["2 slices whole wheat bread", "1 egg", "1/4 cup almond milk", "1 tsp honey"],
+                steps: ["Mix egg, milk, and honey.", "Dip bread in mixture.", "Cook until golden brown.", "Serve with fruit."]
+            },
+            "Mashed Potato": {
+                image: "mashpotato.jpg",
+                ingredients: ["4 large potatoes", "1/2 cup milk", "2 tbsp butter", "Salt & pepper"],
+                steps: ["Boil potatoes.", "Mash with butter and milk.", "Season with salt and pepper."]
+            },
+            "Marmer Cake": {
+                image: "marmer.jpg",
+                ingredients: ["2 cups flour", "1 cup sugar", "1 cup butter", "4 eggs", "1/4 cup cocoa powder"],
+                steps: ["Mix butter and sugar.", "Add eggs one at a time.", "Fold in flour.", "Swirl batters together.", "Bake at 350°F (175°C)."]
+            },
+            "Air Fryer Cheesecake": {
+                image: "basqe-cheesecake.avif",
+                ingredients: ["8 oz cream cheese", "1/4 cup sugar", "1 egg", "1/2 tsp vanilla", "1/4 cup sour cream"],
+                steps: ["Mix ingredients.", "Pour over biscuit crust.", "Air fry at 300°F.", "Chill before serving."]
+            },
+            "No-Bake Cookies": {
+                image: "nobakecookie.jpg",
+                ingredients: ["1 cup oats", "1/2 cup peanut butter", "1/4 cup honey", "1/4 cup cocoa powder"],
+                steps: ["Mix all ingredients.", "Scoop into balls.", "Refrigerate until firm."]
+            },
+            "Fudgy Brownies": {
+                image: "brownie.webp",
+                ingredients: ["1/2 cup butter", "1 cup sugar", "2 eggs", "1/3 cup cocoa powder", "1/2 cup flour"],
+                steps: ["Melt butter and mix with sugar and eggs.", "Add cocoa and flour.", "Bake at 350°F for 25 minutes."]
+            },
+            "Indonesian Grilled Rice": {
+                image: "nasibakar.jpg",
+                ingredients: ["2 cups cooked rice", "1/2 cup shredded chicken", "2 tbsp sambal", "2 banana leaves"],
+                steps: ["Mix rice with sambal.", "Wrap with banana leaves.", "Grill for 5 minutes per side."]
+            }
+        };
+
+
+        const foodList = document.getElementById("food-list");
+        Object.keys(recipes).forEach(food => {
+            let listItem = document.createElement("li");
+            listItem.textContent = food;
+            listItem.onclick = () => showRecipe(food);
+            foodList.appendChild(listItem);
+        });
+
+        function showRecipe(food) {
+            const recipeBox = document.getElementById("recipe-box");
+            if (recipes[food]) {
+                recipeBox.innerHTML = `
+                    <h2>Recipe & Steps</h2>
+                    <h3>${food}</h3>
+                    <img src="${recipes[food].image}" alt="${food}" class="recipe-image">
+                    <h4>Ingredients:</h4>
+                    <ul>${recipes[food].ingredients.map(item => `<li>${item}</li>`).join('')}</ul>
+                    <h4>Steps:</h4>
+                    <ol>${recipes[food].steps.map(step => `<li>${step}</li>`).join('')}</ol>`;
+            }
+        }
+    </script>
+</body>
+<footer>
+    <p>© 2025 My Personal Diary. All Rights Reserved.</p>
+</footer>
+</html>
